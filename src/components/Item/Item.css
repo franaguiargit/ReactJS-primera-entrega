@@ -1,0 +1,31 @@
+.cardProducto {
+background-color: aliceblue;
+border-radius: 10px;
+width: 18rem;
+padding: 1rem;
+margin: 1.7rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.imgProducto{
+    width: 100%;
+    object-fit: contain;
+    overflow: clip;
+    height: auto;
+}
+.imgProducto:hover{
+    transform: scale(1.1,1.1);
+}
+.btnProducto{
+    background-color: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 8rem;
+    border-radius: 10px;
+    border: none;
+    height: auto;
+}
+.btnProducto:hover{
+    transform: scale(1.1,1.1);
+}
