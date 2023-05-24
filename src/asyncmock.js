@@ -1,24 +1,33 @@
 const productos = [
-    {nombre: "Mousepad Logitech G640", precio: 65, id: 1, img: "./img/Mousepadlogitech.webp"},
-    {nombre: "Mousepad Steelseries QcK Heavy", precio: 65, id: 2, img: "./img/MousepadSteelseries.webp"},
-    {nombre: "Mousepad ZOWIE G-SR-SE", precio: 65, id: 3, img: "./img/MousepadZowieGSRSE.webp"},
-    {nombre: "Mousepad Razer Gigantus V2", precio: 65, id: 4, img: "./img/MousepadRazerGigantusV2.webp"},
-    {nombre: "Mousepad ZOWIE G-SR", precio: 65, id: 5, img: "./img/MousepadZowieGSR.webp"}
+    { nombre: "Mousepad Logitech G640", precio: 65, id: 1, img: "./img/Mousepadlogitech.webp", idCat: "4" },
+    { nombre: "Mousepad Steelseries QcK Heavy", precio: 65, id: 2, img: "./img/MousepadSteelseries.webp", idCat: "4" },
+    { nombre: "Mousepad ZOWIE G-SR-SE", precio: 65, id: 3, img: "./img/MousepadZowieGSRSE.webp", idCat: "4" },
+    { nombre: "Mousepad Razer Gigantus V2", precio: 65, id: 4, img: "./img/MousepadRazerGigantusV2.webp", idCat: "4" },
+    { nombre: "Mousepad ZOWIE G-SR", precio: 65, id: 5, img: "./img/MousepadZowieGSR.webp", idCat: "4" }
 ]
 
 export const getProductos = () => {
     return new Promise((resolve) => {
-        setTimeout( () => {
+        setTimeout(() => {
             resolve(productos)
         }, 2000)
     })
-} 
+}
 
 export const getUnProducto = (id) => {
     return new Promise(resolve => {
-        setTimeout( () => {
+        setTimeout(() => {
             const producto = productos.find(prod => prod.id === id)
-                resolve(producto);
+            resolve(producto);
         }, 2000)
+    })
+}
+
+export const getProductosPorCategoria = (idCategoria) => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            const productosCategoria = productos.filter(prod => prod.idCat === idCategoria)
+            resolve(productosCategoria)
+        }, 100)
     })
 }
