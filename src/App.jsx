@@ -4,7 +4,7 @@ import NavBar from './components/Navbar/NavBar';
 //import Contador from './components/Contador/Contador';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         <NavBar />
         <Routes>
 
-          <Route path='/' element={""}> </Route>
-          <Route path='/Monitors' element={""}> </Route>
-          <Route path='/Keyboards' element={""}> </Route>
+          <Route path='/' element={<ItemListContainer greeting="Productos" />}> </Route>
+          <Route path='/categoria/:idCategoria' element={<ItemListContainer />}> </Route>
+          <Route path='/item/:idItem' element={<ItemDetailContainer />}> </Route>
           <Route path='/Mousepads' element={""}> </Route>
           <Route path='/Mouse' element={""}> </Route>
 
@@ -24,8 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      <ItemListContainer greeting="Productos" />
-      <ItemDetailContainer />
+
       {/*     
       <h1>Contador</h1>
       //<Contador inicial={1} stock={10}/>

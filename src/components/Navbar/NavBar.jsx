@@ -18,19 +18,19 @@ function NavBar() {
                         </li>
 
                         <li>
-                            <NavLink to={"/Monitors"}> Monitors </NavLink>
+                            <NavLink to={`/categoria/2`}> Monitors </NavLink>
                         </li>
 
                         <li>
-                            <NavLink to={"/Keyboards"}> Keyboards </NavLink>
+                            <NavLink to={`/categoria/3`}> Keyboards </NavLink>
                         </li>
 
                         <li>
-                            <NavLink to={"/Mousepads"}> Mousepads </NavLink>
+                            <NavLink to={`/categoria/4`}> Mousepads </NavLink>
                         </li>
 
                         <li>
-                            <NavLink to={"/Mouse"}> Mouse </NavLink>
+                            <NavLink to={`/categoria/5`}> Mouse </NavLink>
                         </li>
 
                     </ul>
