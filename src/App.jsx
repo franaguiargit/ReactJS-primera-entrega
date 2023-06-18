@@ -5,24 +5,28 @@ import NavBar from './components/Navbar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { CarritoProvider } from './context/CarritoContext';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
-        <Routes>
+        <CarritoProvider>
+          <NavBar />
+          <Routes>
 
-          <Route path='/' element={<ItemListContainer greeting="Productos" />}> </Route>
-          <Route path='/categoria/:idCategoria' element={<ItemListContainer />}> </Route>
-          <Route path='/item/:idItem' element={<ItemDetailContainer />}> </Route>
-          <Route path='*' element={<h2> Web en desarrollo </h2>}></Route>
-          <Route path='/Mousepads' element={""}> </Route>
-          <Route path='/Mouse' element={""}> </Route>
+            <Route path='/' element={<ItemListContainer greeting="Productos" />}> </Route>
+            <Route path='/categoria/:idCategoria' element={<ItemListContainer />}> </Route>
+            <Route path='/item/:idItem' element={<ItemDetailContainer />}> </Route>
+            <Route path='*' element={<h2> Web en desarrollo </h2>}></Route>
+            <Route path='/cart' element = {<Cart/>}></Route>
+            <Route path='/Mousepads' element={""}> </Route>
+            <Route path='/Mouse' element={""}> </Route>
 
-
-        </Routes>
+          </Routes>
+        </CarritoProvider>
       </BrowserRouter>
 
 
